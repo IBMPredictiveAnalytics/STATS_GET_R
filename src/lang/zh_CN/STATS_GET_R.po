@@ -1,0 +1,142 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: STATS_GET_R.R:91
+msgid "Get R Data"
+msgstr ""
+"获取 R 数据"
+
+#: STATS_GET_R.R:92
+msgid "Get R Data: Warnings"
+msgstr ""
+"获取 R 数据：警告"
+
+#: STATS_GET_R.R:97
+msgid "A dataset was specified without items to fetch or items were specified without a dataset"
+msgstr ""
+"指定了数据集，但未指定要提取的项；或者指定了项，但未指定数据集"
+
+#: STATS_GET_R.R:102
+msgid "Exactly one data source must be specified"
+msgstr ""
+"必须正好指定一个数据源"
+
+#: STATS_GET_R.R:105
+msgid "Only one file or data source can be named"
+msgstr ""
+"只能对一个文件或数据源进行命名"
+
+#: STATS_GET_R.R:154
+msgid "Cannot request both a data frame and series"
+msgstr ""
+"无法同时请求获取数据框和序列"
+
+#: STATS_GET_R.R:157
+msgid "The output dataset name is already in use."
+msgstr ""
+"此输出数据集名称已在使用中。"
+
+#: STATS_GET_R.R:184
+msgid "The series vary in length.  All series must have the same length."
+msgstr ""
+"序列长度存在差异。所有序列都必须具有相同长度。"
+
+#: STATS_GET_R.R:199
+msgid "The specified data frame was not found: %s"
+msgstr ""
+"找不到指定的数据框：%s"
+
+#: STATS_GET_R.R:204
+msgid "The specified workspace item is not a dataframe: %s"
+msgstr ""
+"指定的工作空间项不是数据框：%s"
+
+#: STATS_GET_R.R:324
+msgid "Item"
+msgstr ""
+"项"
+
+#: STATS_GET_R.R:324
+msgid "Class"
+msgstr ""
+"类"
+
+#: STATS_GET_R.R:324
+msgid "Series"
+msgstr ""
+"序列"
+
+#: STATS_GET_R.R:376
+msgid "No items match the selection criteria"
+msgstr ""
+"没有满足选择条件的项"
+
+#: STATS_GET_R.R:378
+msgid "R Workspace Information for Selected Items"
+msgstr ""
+"选定项的 R 工作空间信息"
+
+#: STATS_GET_R.R:380
+msgid "Workspace Information"
+msgstr ""
+"工作空间信息"
+
+#: STATS_GET_R.R:381
+msgid "Source: %s"
+msgstr ""
+"源：%s"
+
+#: STATS_GET_R.R:388
+msgid "Package"
+msgstr ""
+"程序包"
+
+#: STATS_GET_R.R:388
+msgid "Data"
+msgstr ""
+"数据"
+
+#: STATS_GET_R.R:388
+msgid "Title"
+msgstr ""
+"标题"
+
+#: STATS_GET_R.R:389
+#: STATS_GET_R.R:391
+msgid "R Datasets"
+msgstr ""
+"R 数据集"
+
+#: STATS_GET_R.R:392
+msgid "To access these datasets, use the DATA keyword instead of FILE.  Datasets in non-base packages should also specify PACKAGE."
+msgstr ""
+"要访问这些数据集，请使用 DATA 关键字而不是 FILE。非基本程序包中的数据集还应该指定 PACKAGE。"
+
+#: STATS_GET_R.R:425
+msgid "End of procedure"
+msgstr ""
+"过程结束"
+
+#: STATS_GET_R.R:452
+msgid "Message Number"
+msgstr ""
+"消息号"
+
+
