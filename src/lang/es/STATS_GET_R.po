@@ -1,0 +1,142 @@
+#/***********************************************************************
+# * Licensed Materials - Property of IBM 
+# *
+# * IBM SPSS Products: Statistics Common
+# *
+# * (C) Copyright IBM Corp. 1989, 2014
+# *
+# * US Government Users Restricted Rights - Use, duplication or disclosure
+# * restricted by GSA ADP Schedule Contract with IBM Corp. 
+# ************************************************************************/
+
+# NLS_ENCODING=UTF-8
+# IBMUPYTH
+
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: STATS_GET_R.R:91
+msgid "Get R Data"
+msgstr ""
+"Obtener datos de R"
+
+#: STATS_GET_R.R:92
+msgid "Get R Data: Warnings"
+msgstr ""
+"Obtener datos de R: advertencias"
+
+#: STATS_GET_R.R:97
+msgid "A dataset was specified without items to fetch or items were specified without a dataset"
+msgstr ""
+"Se ha especificado un conjunto de datos sin elementos que recuperar o bien se han especificado elementos sin un conjunto de datos"
+
+#: STATS_GET_R.R:102
+msgid "Exactly one data source must be specified"
+msgstr ""
+"Se debe especificar exactamente un origen de datos"
+
+#: STATS_GET_R.R:105
+msgid "Only one file or data source can be named"
+msgstr ""
+"Sólo se puede nombrar un archivo u origen de datos"
+
+#: STATS_GET_R.R:154
+msgid "Cannot request both a data frame and series"
+msgstr ""
+"No se puede solicitar a la vez un marco de datos y una serie"
+
+#: STATS_GET_R.R:157
+msgid "The output dataset name is already in use."
+msgstr ""
+"Este nombre de conjunto de datos de resultado ya se está utilizando."
+
+#: STATS_GET_R.R:184
+msgid "The series vary in length.  All series must have the same length."
+msgstr ""
+"Las series tienen distintas longitud. Todas las series deben tener la misma longitud."
+
+#: STATS_GET_R.R:199
+msgid "The specified data frame was not found: %s"
+msgstr ""
+"No se ha encontrado el marco de datos especificado: %s"
+
+#: STATS_GET_R.R:204
+msgid "The specified workspace item is not a dataframe: %s"
+msgstr ""
+"El elemento de espacio de trabajo especificado no es un marco de datos: %s"
+
+#: STATS_GET_R.R:324
+msgid "Item"
+msgstr ""
+"Elemento"
+
+#: STATS_GET_R.R:324
+msgid "Class"
+msgstr ""
+"Clase"
+
+#: STATS_GET_R.R:324
+msgid "Series"
+msgstr ""
+"Serie"
+
+#: STATS_GET_R.R:376
+msgid "No items match the selection criteria"
+msgstr ""
+"No se ha encontrado ningún elemento que coincida con los criterios de selección"
+
+#: STATS_GET_R.R:378
+msgid "R Workspace Information for Selected Items"
+msgstr ""
+"Información del espacio de trabajo de R para los elementos seleccionados"
+
+#: STATS_GET_R.R:380
+msgid "Workspace Information"
+msgstr ""
+"Información del espacio de trabajo"
+
+#: STATS_GET_R.R:381
+msgid "Source: %s"
+msgstr ""
+"Origen: %s"
+
+#: STATS_GET_R.R:388
+msgid "Package"
+msgstr ""
+"Paquete"
+
+#: STATS_GET_R.R:388
+msgid "Data"
+msgstr ""
+"Datos"
+
+#: STATS_GET_R.R:388
+msgid "Title"
+msgstr ""
+"Título"
+
+#: STATS_GET_R.R:389
+#: STATS_GET_R.R:391
+msgid "R Datasets"
+msgstr ""
+"Conjuntos de datos de R"
+
+#: STATS_GET_R.R:392
+msgid "To access these datasets, use the DATA keyword instead of FILE.  Datasets in non-base packages should also specify PACKAGE."
+msgstr ""
+"Para acceder es estos conjuntos de datos, utilice la palabra clave DATA en lugar de FILE. Los conjuntos de datos de los paquetes que no son básicos deben especificar también PACKAGE."
+
+#: STATS_GET_R.R:425
+msgid "End of procedure"
+msgstr ""
+"Fin del procedimiento"
+
+#: STATS_GET_R.R:452
+msgid "Message Number"
+msgstr ""
+"Número de mensaje"
+
+
