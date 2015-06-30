@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>STATS GET R Extension Command</title>
+
+<link rel="stylesheet" type="text/css" href="extsyntax.css" />
+
+
+
+
+
+</head>
+
+<body>
+<h1>STATS GET R Extension Command</h1>
+
+<p>Get information about an R workspace or create
+an SPSS dataset from an R data frame.</p>
+<div class="syntax">
+<p>STATS GET R
+FILE=&ldquo;<em>filespec</em>&rdquo; or &#42; CLEARENV=YES<sup>&#42;&#42;</sup> or NO<br/>
+PACKAGE=&ldquo;<em>package name</em>&rdquo; DATA=&ldquo;<em>R dataset name</em>&rdquo;
+ALLDATA=YES or NO<sup>&#42;&#42;</sup></p>
+
+<p>/INFO NAMES=<em>list of names</em> or . CLASSES=<em>list of R class types</em> or .</p>
+
+<p>/GET DATAFRAME=<em>dataframe</em> SERIES=<em>list of series</em> DATASET=<em>SPSS dataset name</em>.</p>
+
+
+
+<p><sup>&#42;</sup> Required<br/>
+<sup>&#42;&#42;</sup> Default</p>
+</div>
+<p>STATS GET R /HELP.  prints this information and does nothing else.</p>
+
+<pre class="example"><code>STATS GET R FILE=&quot;c:/data/work.Rdata&quot;
+/GET DATAFRAME=results DATASET=results.
+</code></pre>
+
+<p><strong>FILE</strong> specifies the name of the R workspace file.  &#42; can be used to refer to
+a workspace file previously loaded by this command in the current session.</p>
+
+<p>Alternatively, specify <strong>PACKAGE</strong> and <strong>DATA</strong> to restrict the items to
+data in a particular package and dataset.  For example,<br/>
+<code>STATS GET R DATA=&quot;mammals&quot; PACKAGE=&quot;MASS&quot;</code><br/>
+would return information or retrieve data from the <em>mammals</em> dataset in package <em>MASS</em>.</p>
+
+<p><strong>ALLDATA</strong>=YES produces a listing of all the R dataset by package and R data name.</p>
+
+<p><strong>CLEARENV</strong>, which defaults to YES, specifies whether or not to remove the
+contents of the loaded workspace after the command is run.</p>
+
+<p>You can use either the INFO subcommand or the GET subcommand in one
+invocation but not both.  Typically you would start by using INFO
+to find the contents of a workspace and then use GET to extract a data frame
+and make an SPSS dataset.</p>
+
+<p>If neither GET nor INFO is specified, contents information is displayed.</p>
+
+<h2>INFO</h2>
+
+<p>The INFO subcommand produces a pivot table displaying the contents of
+the workspace filtered by NAMES and CLASSES specifications.</p>
+
+<p><strong>NAMES</strong> can be a list of names or one or more regular expressions.  For example
+<code>NAMES=abc def</code> would limit the information to R items with those names.
+<code>NAMES=&quot;a.*&quot; &quot;b.*&quot;</code> would limit the output to names starting with <em>a</em> or
+starting with <em>b</em>.  (The two regular expressions could, of course, be
+combined into one in this example.)</p>
+
+<p><strong>CLASSES</strong> can specify a list of R object classes to limit the output.
+Any classes can be listed, but the default is data.frame.</p>
+
+<p>NOTE: Since R names are case sensitive, you must use the appropriate case
+in setting these filters.</p>
+
+<p>Use a period to indicate all names or all classes.</p>
+
+<h2>GET</h2>
+
+<p>The GET subcommand is used to create an SPSS dataset from an R data frame.
+Specify the name via <strong>DATAFRAME</strong> or specify one or more series that can be
+combined into a data frame via <strong>SERIES</strong>.</p>
+
+<p><strong>DATASET</strong> specifies the SPSS dataset name to be assigned to the new dataset.
+The dataset name must not already be in use, and the current active file
+should have a dataset name in order to keep it open when the new dataset
+is created.</p>
+
+<p>While most R names will be legal in Statistics, in case of difficulty enclose
+the names in quotes.  When a dataset is created, a reasonable attempt is
+made to make the data frame variable names into legal SPSS names.  If
+the name is modified, the orginal name becomes the variable label.</p>
+
+<p>If the series are all consistent time series, the time points
+are used as the row names.  Otherwise the series are just numbered.</p>
+
+<p>&copy; Copyright IBM Corp. 1989, 2014</p>
+
+</body>
+
+</html>
+
