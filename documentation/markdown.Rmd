@@ -1,0 +1,85 @@
+STATS GET R Extension Command
+==============================
+
+Get information about an R workspace or create
+an SPSS dataset from an R data frame.
+
+STATS GET R
+FILE="*filespec*" or &#42; CLEARENV=YES^&#42;&#42; or NO  
+PACKAGE="*package name*" DATA="*R dataset name*"
+ALLDATA=YES or NO^&#42;&#42;
+
+/INFO NAMES=*list of names* or . CLASSES=*list of R class types* or .
+
+/GET DATAFRAME=*dataframe* SERIES=*list of series* DATASET=*SPSS dataset name*.
+
+STATS GET R /HELP.  prints this information and does nothing else.
+
+^&#42; Required  
+^&#42;&#42; Default
+
+Example:
+```
+STATS GET R FILE="c:/data/work.Rdata"
+/GET DATAFRAME=results DATASET=results.
+```
+
+**FILE** specifies the name of the R workspace file.  &#42; can be used to refer to
+a workspace file previously loaded by this command in the current session.
+
+Alternatively, specify **PACKAGE** and **DATA** to restrict the items to
+data in a particular package and dataset.  For example,  
+```STATS GET R DATA="mammals" PACKAGE="MASS"```  
+would return information from the *mammals* dataset in package *MASS*.
+
+**ALLDATA**=YES produces a listing of all the R dataset by package and R data name.
+
+**CLEARENV**, which defaults to YES, specifies whether or not to remove the
+contents of the loaded workspace after the command is run.
+
+You can use either the INFO subcommand or the GET subcommand in one
+invocation but not both.  Typically you would start by using INFO
+to find the contents of a workspace and then use GET to extract a data frame
+and make an SPSS dataset.
+
+If neither GET nor INFO is specified, contents information is displayed.
+
+INFO
+----
+The INFO subcommand produces a pivot table displaying the contents of
+the workspace filtered by NAMES and CLASSES specifications.
+
+**NAMES** can be a list of names or one or more regular expressions.  For example
+```NAMES=abc def``` would limit the information to R items with those names.
+```NAMES="a.*" "b.*"``` would limit the output to names starting with *a* or
+starting with *b*.  (The two regular expressions could, of course, be
+combined into one in this example.)
+
+**CLASSES** can specify a list of R object classes to limit the output.
+Any classes can be listed, but the default is data.frame.
+
+NOTE: Since R names are case sensitive, you must use the appropriate case
+in setting these filters.
+
+Use a period to indicate all names or all classes.
+
+GET
+---
+The GET subcommand is used to create an SPSS dataset from an R data frame.
+Specify the name via **DATAFRAME** or specify one or more series that can be
+combined into a data frame via **SERIES**.
+
+**DATASET** specifies the SPSS dataset name to be assigned to the new dataset.
+The dataset name must not already be in use, and the current active file
+should have a dataset name in order to keep it open when the new dataset
+is created.
+
+While most R names will be legal in Statistics, in case of difficulty enclose
+the names in quotes.  When a dataset is created, a reasonable attempt is
+made to make the data frame variable names into legal SPSS names.  If
+the name is modified, the orginal name becomes the variable label.
+
+If the series are all consistent time series, the time points
+are used as the row names.  Otherwise the series are just numbered.
+
+(C) Copyright IBM Corp. 1989, 2014

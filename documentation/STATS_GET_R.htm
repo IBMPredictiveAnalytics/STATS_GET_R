@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+  <title>Get Information and Data from R Workspace or Dataset</title>
+  <style type="text/css">
+
+  <!-- 
+
+  H1 {font-weight:bold; color:#006699; font-family:Verdana, Arial, sans-serif;font-size:125%; }
+  H2 {font-weight:bold; color:#006699; font-family:Verdana, Arial, sans-serif;font-size:110%; }
+  BODY {font-family:Verdana, Arial, sans-serif;font-size:80%; }
+  TABLE {font-size:100%;font-family:Verdana, Arial, sans-serif;}
+
+  /* paragraph tags */
+  .step {text-indent: -1.3em; margin-left:1.3em; margin-top: 0px;}
+  .step-glyph { font-family: Arial, Helvetica, sans-serif; }
+  .menuselection {margin-left:10px}
+  .bullet {list-style-type: disc;margin-top:12px; margin-left:36px; text-indent:-1em; }
+  .codeblock {background-color: #ffffe6; display:block; margin-left:5px; padding:5px;font-family:"courier new",monospace; }
+
+  /* inline tags */
+  .code {font-family: Courier,fixed pitch;}                           /*** used to tag pieces of code (syntax, Python, R, HTML, etc.)   ***/
+  .screen {font-weight:bold; color:#408080}                       /*** used refer to on-screen text ***/
+  .name {font-style: italic}                                                       /*** used to tag names, such as variable names, file names, and so forth ***/
+  .runinhead {font-weight: bold} 
+  .superscript {vertical-align:super; font-size:80%}
+  .subscript {vertical-align:sub; font-size:80%}
+  .symbol {font-family: Symbol}
+
+  --> 
+  </style>
+</head>
+
+<body>
+  <h1>Get Information and Data from R Workspace or Dataset</h1>
+  This procedure can do three things.  
+  <p class="bullet">•Display a list of all datasets included
+  with installed R packages.</p>
+  <p class="bullet">•Display information about selected objects in an
+  R workspace file or dataset</p>
+  <p class="bullet">•Read an R data frame from a workspace or dataset and
+  create a Statistics dataset from it.  It can also read a set of variables that
+  can be converted into a data frame and create a Statistics dataset.</p>
+  <p>Typical usage starts with finding the dataset or workspace file; then
+  finding the names and types of objects in it, and finally creating an
+  SPSS dataset from a data frame or set of series.</p>
+  
+  <p><span class="runinhead">R Workspace or Dataset</span> Select the source to be used.
+  It can be an R workspace file or a dataset distributed with an R package.
+  If this command has already been run in this session, and it loaded a workspace
+  or dataset that is still in memory, you can check the second box to use that as the source.
+  </p>
+  <p>Datasets are associated with packages.  To use a package dataset, enter
+  the package and dataset names.  Only installed packages can be selected.
+  Datasets in base R are in the <i>datasets</i> package.</p>
+
+
+  <p><span class="runinhead">List all package datasets</span> Check this box
+  to produce a table listing all the datasets in the installed packages.  The
+  listing includes the package name, the dataset name, and a title.  If the dataset name
+  includes a parenthesized string, e. g., <i>BJsales.lead (BJsales)</i>, use the text inside
+  the parentheses to refer to the dataset when loading it.</p>
+
+  <p><span class="runinhead">Clear workspace after use</span> Check this box to
+  remove the workspace or data from memory after this command completes.</p>
+  
+  <p><span class="runinhead">Task</span> Choose whether to display information
+  about the contents of the workspace or dataset or to create a Statistics dataset
+  from an appropriate object.  
+  
+  <p><span class="runinhead">Display contents information</span> 
+  By default, information about all data frames
+  is displayed.  You can filter the names by entering one or more specific names
+  in the Name Filter field or by entering a regular expression such as "x.*" to
+  limit the information to matching names.  This example would list all the objects
+  whose name starts with x and satisfy the class filter.
+  <p>You can select the object classes for the output by entering one or more class
+  names in the Class Filter.  Use "." to request all classes.  The list of possible
+  R classes is open ended, but common ones include "data.frame", "list", "matrix",
+  and "function".</p>
+  <p class="bullet">• Names in R are case sensitive. </p>
+  
+  <p><span class="runinhead">Create Statistics Dataset</span>
+  Choose this button to create a Statistics dataset corresponding to an R data frame or
+  a set of compatible series.  Enter a data frame name in the Data Frame field or
+  one or more series names in the Series to Combine field.  Enter a name for the
+  Statistics dataset in the Dataset Name field.</p>
+  
+  <p>Instead of converting a data frame to a dataset, you can specify a list of
+  variables in the R workspace or dataset.  They will be combined into a data frame
+  which is then imported.  All the variables must have the same number of cases.</p>
+  
+  <p>A reasonable effort is made to map R variable names to legal Statistics names,
+  but some unusual names may cause the extraction to fail.  If the Statistics name
+  differs from the R name, the R name is used as the variable label.</p>
+  <p class="bullet">• The dataset name must not already be in use. </p>
+
+
+  <h2>Additional Features</h2>
+
+  <p>This dialog generates syntax for the STATS GET R extension
+  command. To display the syntax help, run the following
+  command.</p>
+
+  <p class="codeblock">STATS GET R /HELP.</p>
+
+  <h2>Requirements</h2>This command requires the R Essentials and at
+  least version 18 of IBM SPSS Statistics.
+  You can download the Essentials from the SPSS Community website
+  at www.ibm.com/developerworks/spssdevcentral.<br>
+  <hr>
+
+  <p style="font-family:Verdana, Arial, sans-serif;font-size:80%;">
+  © Copyright IBM Corp. 2014</p>
+</body>
+</html>
