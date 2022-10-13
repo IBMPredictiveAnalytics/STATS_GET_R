@@ -1,4 +1,5 @@
 Name: STATS GET R
+Display-Name: R Workspace Information
 Dialog-Specs: STATS_GET_R.spd
 Command-Specs: STATS_GET_R.xml
 Code-Files: STATS_GET_R.R
@@ -16,3 +17,4 @@ Date: 4/3/2014
 Categories: utility R
 Plugins: R
 Translation-Catalogues: lang
+Product-Version-Maximum: 99
